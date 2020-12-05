@@ -48,9 +48,24 @@ After your query is ready you can use this function to view and create graphs of
 where(source_user="grp adm" action="ACCOUNT_DISABLED")
 ```
 
+#### Find specific action and count number:  
+```
+where(source_user="grp adm" action="ACCOUNT_DISABLED") calculate(count)
+```
+
+#### Find specific device:  
+```
+where(asset="iphone_of_siem")
+```
+
 #### Find specific event ID:  
 ```
 where(4725)
+```
+
+#### Find specific Mac address:  
+```
+where(client_mac="11:22:33:aa:bb:cc")
 ```
 
 #### Search specific User:  
@@ -105,3 +120,12 @@ where(direction="OUTBOUND")
 where(direction="INTERNAL")
 ```
 
+#### Find user Alice with regex:  
+```
+where(/Alice (?P<VARIABLE>\s*)/ )
+```
+
+### Find all e-mail:  
+```
+where(/@domain.com/)
+```
