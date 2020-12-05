@@ -81,12 +81,20 @@ where("192.168.1.1")
 #### Find source logs the specific IP:  
 ```
 where(source_ip="192.168.1.1")
+```  
+**Or**  
 ```
+where(source_address="192.168.1.1")
+```  
 
 #### Find destination logs the specific IP:  
 ```
 where(destination_ip="192.168.1.1")
+```  
+**Or**  
 ```
+where(destination_address="192.168.1.1")
+```  
 
 #### Find specific source port:  
 ```
